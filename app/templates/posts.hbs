@@ -1,5 +1,16 @@
+<h2>Sub-Reddits</h2>
+
 {{#each post in model}}
-  <h2>{{post.data.title}}</h2>
+  <div class="post">
+    <h3>
+      <a {{bind-attr href=post.data.url}}>
+        {{post.data.title}}
+      </a>
+    </h3>
+    <p>
+      by: {{post.data.author}}
+    </p>
+  </div>
 {{/each}}
 
 {{outlet}}
